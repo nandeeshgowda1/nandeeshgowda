@@ -44,187 +44,56 @@
     </button>
 
 </header>
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-from werkzeug.security import generate_password_hash, check_password_hash
-import sqlite3
-import os
+    <script>
+async function login() {
 
-app = Flask(__name__)
-CORS(app)
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-DATABASE = "database.db"
+    try {
 
+        const response = await fetch(
+            "https://YOUR-BACKEND-URL/api/login",
+            {
+                method: "POST",
 
-def get_db():
-    conn = sqlite3.connect(DATABASE)
-    conn.row_factory = sqlite3.Row
-    return conn
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            }
+        );
 
-def init_db():
-    conn = get_db()
+        const data = await response.json();
 
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS students (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            email TEXT UNIQUE NOT NULL,
-            password TEXT NOT NULL,
-            college TEXT,
-            branch TEXT,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-    """)
+        if (data.success) {
 
-    conn.commit()
-    conn.close()
+            alert("Login successful!");
 
+            localStorage.setItem(
+                "student",
+                JSON.stringify(data.student)
+            );
 
-@app.route("/")
-def home():
-    return jsonify({
-        "message": "SkillBridge Backend is running!"
-    })
+            window.location.href = "dashboard.html";
 
+        } else {
 
-# ---------------- REGISTER ----------------
-
-@app.route("/api/register", methods=["POST"])
-def register():
-
-    data = request.get_json()
-
-    name = data.get("name")
-    email = data.get("email")
-    password = data.get("password")
-    college = data.get("college", "")
-    branch = data.get("branch", "")
-
-    if not name or not email or not password:
-        return jsonify({
-            "success": False,
-            "message": "Name, email and password are required"
-        }), 400
-
-    hashed_password = generate_password_hash(password)
-
-    try:
-        conn = get_db()
-
-        conn.execute("""
-            INSERT INTO students
-            (name, email, password, college, branch)
-            VALUES (?, ?, ?, ?, ?)
-        """, (
-            name,
-            email,
-            hashed_password,
-            college,
-            branch
-        ))
-
-        conn.commit()
-        conn.close()
-
-        return jsonify({
-            "success": True,
-            "message": "Student registered successfully"
-        }), 201
-
-    except sqlite3.IntegrityError:
-
-        return jsonify({
-            "success": False,
-            "message": "Email already registered"
-        }), 409
-
-
-# ---------------- LOGIN ----------------
-
-@app.route("/api/login", methods=["POST"])
-def login():
-
-    data = request.get_json()
-
-    email = data.get("email")
-    password = data.get("password")
-
-    if not email or not password:
-        return jsonify({
-            "success": False,
-            "message": "Email and password are required"
-        }), 400
-
-    conn = get_db()
-
-    student = conn.execute("""
-        SELECT * FROM students
-        WHERE email = ?
-    """, (email,)).fetchone()
-
-    conn.close()
-
-    if student is None:
-        return jsonify({
-            "success": False,
-            "message": "Invalid email or password"
-        }), 401
-
-    if not check_password_hash(student["password"], password):
-        return jsonify({
-            "success": False,
-            "message": "Invalid email or password"
-        }), 401
-
-    return jsonify({
-        "success": True,
-        "message": "Login successful",
-        "student": {
-            "id": student["id"],
-            "name": student["name"],
-            "email": student["email"],
-            "college": student["college"],
-            "branch": student["branch"]
+            alert(data.message);
         }
-    })
 
+    } catch (error) {
 
-# ---------------- STUDENT PROFILE ----------------
+        console.error(error);
+        alert("Unable to connect to server.");
+    }
+}
+    </script>
 
-@app.route("/api/student/<int:student_id>", methods=["GET"])
-def student_profile(student_id):
-
-    conn = get_db()
-
-    student = conn.execute("""
-        SELECT id, name, email, college, branch, created_at
-        FROM students
-        WHERE id = ?
-    """, (student_id,)).fetchone()
-
-    conn.close()
-
-    if student is None:
-        return jsonify({
-            "success": False,
-            "message": "Student not found"
-        }), 404
-
-    return jsonify({
-        "success": True,
-        "student": dict(student)
-    })
-
-
-if __name__ == "__main__":
-    init_db()
-
-    app.run(
-        host="0.0.0.0",
-        port=int(os.environ.get("PORT", 5000)),
-        debug=True
-    )
 
 <!-- ================= HERO ================= -->
 
