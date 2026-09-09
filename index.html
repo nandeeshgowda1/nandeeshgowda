@@ -1,12 +1,1554 @@
-<doctype html>
-    <html>
-        <head>
-            <title>
-                my website 
-            </title>
-        </head>
-        <body>
-            <h1>nandeesh</h1>
-            <p>bajsvdgchvajkbssvhcjg</p>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillBridge | Academia Industry Collaboration</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">SB</div>
+
+        <div>
+            <h2>SkillBridge</h2>
+            <span>Academia × Industry</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#collaboration">Collaboration</a>
+        <a href="#dashboard">Dashboard</a>
+    </nav>
+
+    <button class="login-btn" onclick="openLogin()">
+        Login
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            🚀 Smart India Hackathon Solution
+        </div>
+
+        <h1>
+            Bridging the Gap Between
+            <span>Academia & Industry</span>
+        </h1>
+
+        <p>
+            Assess skills, identify skill gaps, discover industry opportunities,
+            gain practical experience and become placement ready — all in one
+            intelligent platform.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn" onclick="openAssessment()">
+                Take Skill Assessment →
+            </button>
+
+            <button class="secondary-btn" onclick="scrollToSection('opportunities')">
+                Explore Opportunities
+            </button>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>10K+</strong>
+                <span>Students</span>
+            </div>
+
+            <div>
+                <strong>250+</strong>
+                <span>Companies</span>
+            </div>
+
+            <div>
+                <strong>500+</strong>
+                <span>Internships</span>
+            </div>
+
+            <div>
+                <strong>85%</strong>
+                <span>Placement Readiness</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="floating-card card-one">
+
+            <div class="mini-icon blue">🎯</div>
+
+            <div>
+                <strong>Skill Readiness</strong>
+                <span>82% Ready</span>
+            </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <div class="skill-header">
+                <div>
+                    <small>YOUR CAREER</small>
+                    <h3>Data Scientist</h3>
+                </div>
+
+                <div class="score">
+                    82%
+                </div>
+            </div>
+
+            <div class="skill">
+                <div>
+                    <span>Python</span>
+                    <b>85%</b>
+                </div>
+
+                <div class="progress">
+                    <div style="width:85%"></div>
+                </div>
+            </div>
+
+
+            <div class="skill">
+                <div>
+                    <span>SQL</span>
+                    <b>78%</b>
+                </div>
+
+                <div class="progress">
+                    <div style="width:78%"></div>
+                </div>
+            </div>
+
+
+            <div class="skill">
+                <div>
+                    <span>Machine Learning</span>
+                    <b>65%</b>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-warning" style="width:65%"></div>
+                </div>
+            </div>
+
+
+            <div class="skill">
+                <div>
+                    <span>Statistics</span>
+                    <b>48%</b>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-danger" style="width:48%"></div>
+                </div>
+            </div>
+
+
+            <div class="gap-box">
+                <strong>⚠ Skill Gap Detected</strong>
+                <p>
+                    Improve Machine Learning and Statistics
+                    to increase your placement readiness.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">ONE PLATFORM</span>
+
+        <h2>
+            Everything You Need to
+            <span>Build Your Career</span>
+        </h2>
+
+        <p>
+            SkillBridge connects students, academic institutions and industries
+            through a single intelligent ecosystem.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon purple">🧠</div>
+
+            <h3>Skill Assessment</h3>
+
+            <p>
+                Assess technical, aptitude and soft skills to create
+                your personalized skill profile.
+            </p>
+
+            <button onclick="openAssessment()">
+                Start Assessment →
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon blue">🗺️</div>
+
+            <h3>Skill Mapping</h3>
+
+            <p>
+                Compare your current skills with industry requirements
+                and identify exactly what you need to learn.
+            </p>
+
+            <button onclick="showSkillMap()">
+                View Skill Map →
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon green">💼</div>
+
+            <h3>Internships & Jobs</h3>
+
+            <p>
+                Discover opportunities matched to your skills,
+                education and career interests.
+            </p>
+
+            <button onclick="scrollToSection('opportunities')">
+                Explore Jobs →
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon orange">🎓</div>
+
+            <h3>Industry Learning</h3>
+
+            <p>
+                Join workshops, bootcamps, certifications and
+                industry-led learning programs.
+            </p>
+
+            <button onclick="showPrograms()">
+                Explore Programs →
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon pink">🤝</div>
+
+            <h3>Industry Collaboration</h3>
+
+            <p>
+                Connect institutions with companies for mentorships,
+                workshops, hackathons and live projects.
+            </p>
+
+            <button onclick="scrollToSection('collaboration')">
+                Collaborate →
+            </button>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon cyan">🪪</div>
+
+            <h3>Digital Skill Passport</h3>
+
+            <p>
+                Maintain a verified digital profile of skills,
+                projects, internships and achievements.
+            </p>
+
+            <button onclick="showPassport()">
+                View Passport →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILL INTELLIGENCE ================= -->
+
+<section class="intelligence-section">
+
+    <div class="intelligence-content">
+
+        <span class="section-label">AI-POWERED</span>
+
+        <h2>
+            Know Exactly
+            <span>Where You Stand</span>
+        </h2>
+
+        <p>
+            Our skill intelligence engine analyzes your assessment results,
+            projects, certifications and career goals to identify skill gaps
+            and recommend the right learning and industry opportunities.
+        </p>
+
+
+        <div class="intelligence-list">
+
+            <div>
+                <span>✓</span>
+                Career-based skill mapping
+            </div>
+
+            <div>
+                <span>✓</span>
+                Personalized skill-gap analysis
+            </div>
+
+            <div>
+                <span>✓</span>
+                Internship matching
+            </div>
+
+            <div>
+                <span>✓</span>
+                Industry learning recommendations
+            </div>
+
+        </div>
+
+
+        <button class="primary-btn" onclick="showSkillMap()">
+            Analyze My Skills →
+        </button>
+
+    </div>
+
+
+    <div class="career-map">
+
+        <div class="career-title">
+            <span>Career Path</span>
+            <strong>AI / Data Science</strong>
+        </div>
+
+
+        <div class="career-step completed">
+            <div class="step-circle">✓</div>
+
+            <div>
+                <strong>Python</strong>
+                <small>Completed</small>
+            </div>
+        </div>
+
+
+        <div class="career-line"></div>
+
+
+        <div class="career-step completed">
+            <div class="step-circle">✓</div>
+
+            <div>
+                <strong>SQL & Data Analysis</strong>
+                <small>Completed</small>
+            </div>
+        </div>
+
+
+        <div class="career-line"></div>
+
+
+        <div class="career-step current">
+            <div class="step-circle">3</div>
+
+            <div>
+                <strong>Machine Learning</strong>
+                <small>Needs improvement</small>
+            </div>
+        </div>
+
+
+        <div class="career-line"></div>
+
+
+        <div class="career-step">
+            <div class="step-circle">4</div>
+
+            <div>
+                <strong>Deep Learning</strong>
+                <small>Upcoming</small>
+            </div>
+        </div>
+
+
+        <div class="career-line"></div>
+
+
+        <div class="career-step">
+            <div class="step-circle">5</div>
+
+            <div>
+                <strong>Industry Internship</strong>
+                <small>Recommended</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OPPORTUNITIES ================= -->
+
+<section id="opportunities" class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">OPPORTUNITIES</span>
+
+        <h2>
+            Find Your Next
+            <span>Opportunity</span>
+        </h2>
+
+        <p>
+            Industry internships, jobs and learning opportunities
+            personalized for your profile.
+        </p>
+
+    </div>
+
+
+    <div class="filter-bar">
+
+        <input
+            id="searchOpportunity"
+            type="text"
+            placeholder="🔍 Search internships, jobs or skills..."
+            onkeyup="filterOpportunities()"
+        >
+
+        <select id="opportunityType" onchange="filterOpportunities()">
+
+            <option value="all">All Opportunities</option>
+            <option value="internship">Internships</option>
+            <option value="job">Jobs</option>
+            <option value="training">Training</option>
+
+        </select>
+
+        <select>
+
+            <option>All Domains</option>
+            <option>AI / ML</option>
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>Cybersecurity</option>
+            <option>Cloud Computing</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="opportunity-grid" id="opportunityGrid">
+
+
+        <div class="opportunity-card" data-type="internship">
+
+            <div class="company-row">
+
+                <div class="company-logo purple-bg">
+                    AI
+                </div>
+
+                <div>
+                    <h3>AI / ML Intern</h3>
+                    <span>ABC Technologies</span>
+                </div>
+
+                <span class="match">94% Match</span>
+
+            </div>
+
+
+            <div class="opportunity-info">
+
+                <span>📍 Remote</span>
+                <span>💰 ₹15K/month</span>
+                <span>⏱ 6 Months</span>
+
+            </div>
+
+
+            <div class="tags">
+
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>TensorFlow</span>
+
+            </div>
+
+
+            <div class="opportunity-footer">
+
+                <small>Posted 2 days ago</small>
+
+                <button onclick="applyOpportunity('AI / ML Intern')">
+                    Apply Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="opportunity-card" data-type="internship">
+
+            <div class="company-row">
+
+                <div class="company-logo blue-bg">
+                    TS
+                </div>
+
+                <div>
+                    <h3>Full Stack Developer</h3>
+                    <span>TechSolutions Pvt Ltd</span>
+                </div>
+
+                <span class="match">88% Match</span>
+
+            </div>
+
+
+            <div class="opportunity-info">
+
+                <span>📍 Hyderabad</span>
+                <span>💰 ₹20K/month</span>
+                <span>⏱ 4 Months</span>
+
+            </div>
+
+
+            <div class="tags">
+
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+
+            </div>
+
+
+            <div class="opportunity-footer">
+
+                <small>Posted 1 day ago</small>
+
+                <button onclick="applyOpportunity('Full Stack Developer')">
+                    Apply Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="opportunity-card" data-type="job">
+
+            <div class="company-row">
+
+                <div class="company-logo green-bg">
+                    DX
+                </div>
+
+                <div>
+                    <h3>Junior Data Analyst</h3>
+                    <span>DataX Labs</span>
+                </div>
+
+                <span class="match">81% Match</span>
+
+            </div>
+
+
+            <div class="opportunity-info">
+
+                <span>📍 Bengaluru</span>
+                <span>💰 ₹6 LPA</span>
+                <span>⏱ Full Time</span>
+
+            </div>
+
+
+            <div class="tags">
+
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Power BI</span>
+
+            </div>
+
+
+            <div class="opportunity-footer">
+
+                <small>Posted 3 days ago</small>
+
+                <button onclick="applyOpportunity('Junior Data Analyst')">
+                    Apply Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="opportunity-card" data-type="training">
+
+            <div class="company-row">
+
+                <div class="company-logo orange-bg">
+                    CL
+                </div>
+
+                <div>
+                    <h3>Cloud Computing Bootcamp</h3>
+                    <span>CloudLabs India</span>
+                </div>
+
+                <span class="match">92% Match</span>
+
+            </div>
+
+
+            <div class="opportunity-info">
+
+                <span>🌐 Online</span>
+                <span>🎓 Certificate</span>
+                <span>⏱ 8 Weeks</span>
+
+            </div>
+
+
+            <div class="tags">
+
+                <span>AWS</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+
+            </div>
+
+
+            <div class="opportunity-footer">
+
+                <small>Starts next week</small>
+
+                <button onclick="enrollProgram('Cloud Computing Bootcamp')">
+                    Enroll
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APPLICATION TRACKER ================= -->
+
+<section class="tracker-section">
+
+    <div class="tracker-container">
+
+        <div class="section-heading left">
+
+            <span class="section-label">APPLICATION TRACKER</span>
+
+            <h2>
+                Track Your
+                <span>Career Journey</span>
+            </h2>
+
+            <p>
+                Never lose track of your internship and placement applications.
+            </p>
+
+        </div>
+
+
+        <div class="application-list">
+
+
+            <div class="application">
+
+                <div class="application-logo purple-bg">
+                    AI
+                </div>
+
+                <div class="application-details">
+
+                    <h3>AI / ML Intern</h3>
+                    <span>ABC Technologies</span>
+
+                </div>
+
+                <div class="application-status">
+
+                    <div class="status active">
+                        Applied
+                    </div>
+
+                    <small>Sep 4, 2026</small>
+
+                </div>
+
+            </div>
+
+
+            <div class="application">
+
+                <div class="application-logo blue-bg">
+                    TS
+                </div>
+
+                <div class="application-details">
+
+                    <h3>Full Stack Developer</h3>
+                    <span>TechSolutions Pvt Ltd</span>
+
+                </div>
+
+                <div class="application-status">
+
+                    <div class="status success">
+                        Shortlisted
+                    </div>
+
+                    <small>Interview: Sep 12</small>
+
+                </div>
+
+            </div>
+
+
+            <div class="application">
+
+                <div class="application-logo green-bg">
+                    DX
+                </div>
+
+                <div class="application-details">
+
+                    <h3>Data Analyst</h3>
+                    <span>DataX Labs</span>
+
+                </div>
+
+                <div class="application-status">
+
+                    <div class="status selected">
+                        Selected 🎉
+                    </div>
+
+                    <small>Offer received</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FACULTY ================= -->
+
+<section class="faculty-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">FOR ACADEMICIANS</span>
+
+        <h2>
+            Empower Faculty With
+            <span>Industry Exposure</span>
+        </h2>
+
+        <p>
+            Discover faculty internships, FDPs, workshops and industry
+            collaboration opportunities.
+        </p>
+
+    </div>
+
+
+    <div class="faculty-grid">
+
+
+        <div class="faculty-card">
+
+            <div class="faculty-icon">🎓</div>
+
+            <span class="faculty-type">FACULTY FDP</span>
+
+            <h3>AI in Modern Manufacturing</h3>
+
+            <p>
+                Learn how AI and automation are transforming
+                modern manufacturing.
+            </p>
+
+            <div class="faculty-meta">
+                <span>📅 5 Days</span>
+                <span>🌐 Online</span>
+            </div>
+
+            <button onclick="registerFaculty('AI in Modern Manufacturing')">
+                Register →
+            </button>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="faculty-icon">🏭</div>
+
+            <span class="faculty-type">INDUSTRY INTERNSHIP</span>
+
+            <h3>Industry 4.0 Faculty Internship</h3>
+
+            <p>
+                Hands-on exposure to industrial automation,
+                IoT and smart manufacturing.
+            </p>
+
+            <div class="faculty-meta">
+                <span>📅 4 Weeks</span>
+                <span>📍 Bengaluru</span>
+            </div>
+
+            <button onclick="registerFaculty('Industry 4.0 Faculty Internship')">
+                Apply →
+            </button>
+
+        </div>
+
+
+        <div class="faculty-card">
+
+            <div class="faculty-icon">💡</div>
+
+            <span class="faculty-type">WORKSHOP</span>
+
+            <h3>Building Industry Partnerships</h3>
+
+            <p>
+                Learn strategies for creating sustainable
+                academia-industry partnerships.
+            </p>
+
+            <div class="faculty-meta">
+                <span>📅 2 Days</span>
+                <span>🌐 Hybrid</span>
+            </div>
+
+            <button onclick="registerFaculty('Building Industry Partnerships')">
+                Register →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COLLABORATION ================= -->
+
+<section id="collaboration" class="collaboration-section">
+
+    <div class="collaboration-content">
+
+        <span class="section-label">COLLABORATION HUB</span>
+
+        <h2>
+            Connect
+            <span>Academia & Industry</span>
+        </h2>
+
+        <p>
+            Build meaningful partnerships through mentorship programs,
+            workshops, hackathons, live projects, internships and research.
+        </p>
+
+
+        <button class="primary-btn" onclick="openCollaboration()">
+            Start Collaboration →
+        </button>
+
+    </div>
+
+
+    <div class="collaboration-types">
+
+        <div>🤝 <strong>Mentorship</strong></div>
+        <div>🎤 <strong>Guest Lectures</strong></div>
+        <div>💻 <strong>Live Projects</strong></div>
+        <div>🏆 <strong>Hackathons</strong></div>
+        <div>🏭 <strong>Industry Visits</strong></div>
+        <div>🔬 <strong>Research</strong></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INSTITUTION DASHBOARD ================= -->
+
+<section id="dashboard" class="dashboard-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">INSTITUTION ANALYTICS</span>
+
+        <h2>
+            Make Data-Driven
+            <span>Academic Decisions</span>
+        </h2>
+
+        <p>
+            Institutions can monitor student skill development,
+            internships, industry engagement and placement outcomes.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-stats">
+
+        <div class="dashboard-stat">
+
+            <span>👨‍🎓</span>
+
+            <div>
+                <small>Total Students</small>
+                <strong>2,450</strong>
+            </div>
+
+            <em>+12%</em>
+
+        </div>
+
+
+        <div class="dashboard-stat">
+
+            <span>🧠</span>
+
+            <div>
+                <small>Skills Assessed</small>
+                <strong>2,180</strong>
+            </div>
+
+            <em>89%</em>
+
+        </div>
+
+
+        <div class="dashboard-stat">
+
+            <span>💼</span>
+
+            <div>
+                <small>Internships</small>
+                <strong>840</strong>
+            </div>
+
+            <em>+24%</em>
+
+        </div>
+
+
+        <div class="dashboard-stat">
+
+            <span>🎯</span>
+
+            <div>
+                <small>Placed Students</small>
+                <strong>1,420</strong>
+            </div>
+
+            <em>84%</em>
+
+        </div>
+
+    </div>
+
+
+    <div class="charts-grid">
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <small>SKILL GAP ANALYSIS</small>
+                    <h3>Top Skill Gaps</h3>
+                </div>
+
+                <select>
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                </select>
+
+            </div>
+
+            <canvas id="skillChart"></canvas>
+
+        </div>
+
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div>
+                    <small>PLACEMENT PERFORMANCE</small>
+                    <h3>Placement Rate</h3>
+                </div>
+
+                <span class="growth">↑ 12.5%</span>
+
+            </div>
+
+            <canvas id="placementChart"></canvas>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DIGITAL PASSPORT ================= -->
+
+<section class="passport-section">
+
+    <div class="passport-text">
+
+        <span class="section-label">DIGITAL SKILL PASSPORT</span>
+
+        <h2>
+            Your Skills.
+            <span>Verified.</span>
+        </h2>
+
+        <p>
+            Build a trusted digital identity containing verified skills,
+            certifications, projects, internships and achievements.
+        </p>
+
+
+        <div class="verification-list">
+
+            <div>
+                <span>✓</span>
+                Assessment verified skills
+            </div>
+
+            <div>
+                <span>✓</span>
+                Industry verified internships
+            </div>
+
+            <div>
+                <span>✓</span>
+                Faculty verified projects
+            </div>
+
+            <div>
+                <span>✓</span>
+                Verified certificates
+            </div>
+
+        </div>
+
+
+        <button class="primary-btn" onclick="showPassport()">
+            View My Skill Passport →
+        </button>
+
+    </div>
+
+
+    <div class="passport">
+
+        <div class="passport-top">
+
+            <div class="passport-profile">
+
+                <div class="avatar">
+                    RK
+                </div>
+
+                <div>
+                    <h3>Rahul Kumar</h3>
+                    <span>B.Tech Computer Science</span>
+                </div>
+
+            </div>
+
+            <div class="verified">
+                ✓ VERIFIED
+            </div>
+
+        </div>
+
+
+        <div class="passport-score">
+
+            <div>
+                <small>PLACEMENT READINESS</small>
+                <strong>84%</strong>
+            </div>
+
+            <div class="score-ring">
+                84
+            </div>
+
+        </div>
+
+
+        <div class="passport-skills">
+
+            <h4>Verified Skills</h4>
+
+            <div class="passport-skill">
+                <span>Python</span>
+                <b>85%</b>
+            </div>
+
+            <div class="passport-skill">
+                <span>SQL</span>
+                <b>78%</b>
+            </div>
+
+            <div class="passport-skill">
+                <span>React</span>
+                <b>72%</b>
+            </div>
+
+            <div class="passport-skill">
+                <span>Machine Learning</span>
+                <b>65%</b>
+            </div>
+
+        </div>
+
+
+        <div class="passport-achievements">
+
+            <div>
+                <strong>4</strong>
+                <span>Projects</span>
+            </div>
+
+            <div>
+                <strong>2</strong>
+                <span>Internships</span>
+            </div>
+
+            <div>
+                <strong>5</strong>
+                <span>Certificates</span>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <span>Hackathons</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div>
+
+        <span class="section-label">START TODAY</span>
+
+        <h2>
+            Build Skills.
+            <span>Get Experience.</span>
+            Get Hired.
+        </h2>
+
+        <p>
+            Join the ecosystem connecting students, institutions and
+            industries for a better future of employability.
+        </p>
+
+        <button class="primary-btn" onclick="openLogin()">
+            Get Started →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    SB
+                </div>
+
+                <div>
+                    <h2>SkillBridge</h2>
+                    <span>Academia × Industry</span>
+                </div>
+
+            </div>
+
+            <p>
+                Bridging the gap between academic learning
+                and industry expectations.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>Platform</h4>
+
+            <a href="#features">Skill Assessment</a>
+            <a href="#features">Skill Mapping</a>
+            <a href="#opportunities">Internships</a>
+            <a href="#opportunities">Jobs</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Institutions</h4>
+
+            <a href="#dashboard">Analytics</a>
+            <a href="#collaboration">Collaboration</a>
+            <a href="#">Faculty Programs</a>
+            <a href="#">Industry Training</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Company</h4>
+
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 SkillBridge. SIH Prototype.
+        </span>
+
+        <span>
+            Made for the future of employability 🚀
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div class="modal-overlay" id="loginModal">
+
+    <div class="modal">
+
+        <button class="close-modal" onclick="closeModal('loginModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            🔐
+        </div>
+
+        <h2>Welcome to SkillBridge</h2>
+
+        <p>Select your role to continue</p>
+
+
+        <div class="role-grid">
+
+            <button onclick="loginAs('Student')">
+                👨‍🎓
+                <strong>Student</strong>
+                <small>Find opportunities</small>
+            </button>
+
+            <button onclick="loginAs('Faculty')">
+                👨‍🏫
+                <strong>Faculty</strong>
+                <small>Industry programs</small>
+            </button>
+
+            <button onclick="loginAs('Industry')">
+                🏢
+                <strong>Industry</strong>
+                <small>Hire & collaborate</small>
+            </button>
+
+            <button onclick="loginAs('Institution')">
+                🏫
+                <strong>Institution</strong>
+                <small>Manage students</small>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ASSESSMENT MODAL ================= -->
+
+<div class="modal-overlay" id="assessmentModal">
+
+    <div class="modal assessment-modal">
+
+        <button class="close-modal" onclick="closeModal('assessmentModal')">
+            ×
+        </button>
+
+        <span class="section-label">SKILL ASSESSMENT</span>
+
+        <h2>Discover Your Skills</h2>
+
+        <p>
+            Answer a few questions to estimate your current skill level.
+        </p>
+
+
+        <div id="questionContainer">
+
+            <div class="question">
+
+                <span>Question 1 of 3</span>
+
+                <h3>
+                    Which language are you most comfortable using?
+                </h3>
+
+                <button onclick="answerQuestion('Python')">
+                    Python
+                </button>
+
+                <button onclick="answerQuestion('Java')">
+                    Java
+                </button>
+
+                <button onclick="answerQuestion('JavaScript')">
+                    JavaScript
+                </button>
+
+                <button onclick="answerQuestion('C++')">
+                    C++
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PASSPORT MODAL ================= -->
+
+<div class="modal-overlay" id="passportModal">
+
+    <div class="modal passport-modal">
+
+        <button class="close-modal" onclick="closeModal('passportModal')">
+            ×
+        </button>
+
+        <div class="passport-large">
+
+            <div class="passport-top">
+
+                <div class="passport-profile">
+
+                    <div class="avatar">
+                        RK
+                    </div>
+
+                    <div>
+                        <h3>Rahul Kumar</h3>
+                        <span>B.Tech Computer Science</span>
+                    </div>
+
+                </div>
+
+                <div class="verified">
+                    ✓ VERIFIED
+                </div>
+
+            </div>
+
+
+            <div class="passport-large-content">
+
+                <h3>Digital Skill Passport</h3>
+
+                <p>
+                    Unique ID: SB-2026-10428
+                </p>
+
+
+                <div class="passport-verification-grid">
+
+                    <div>
+                        <span>✓</span>
+                        <strong>Skills</strong>
+                        <small>Verified</small>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <strong>Projects</strong>
+                        <small>Verified</small>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <strong>Internships</strong>
+                        <small>Verified</small>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <strong>Certificates</strong>
+                        <small>Verified</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+
+    <span id="toastIcon">✓</span>
+
+    <div>
+        <strong id="toastTitle">Success</strong>
+        <p id="toastMessage">Action completed successfully.</p>
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
